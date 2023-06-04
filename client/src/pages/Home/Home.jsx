@@ -5,6 +5,7 @@ import { heros } from "../../redux/selectors";
 import { CardList } from "../../components/CardList/CardList";
 import { Button, Container } from "@mui/material";
 import { incrementPage } from "../../redux/slices/hero";
+import styles from "./Home.module.scss";
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,11 @@ export const Home = () => {
   return (
     <Container>
       <CardList list={items} />
-      <Button onClick={loadMore} >Load more</Button>
+      <div style={{ display: "flex", justifyContent: "center", marginTop:20 }}>
+        <Button variant="contained" size="large" onClick={loadMore}>
+          Load more
+        </Button>
+      </div>
     </Container>
   );
 };

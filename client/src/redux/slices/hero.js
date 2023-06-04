@@ -39,6 +39,7 @@ export const heroSlice = createSlice({
     [addHero.fulfilled]: (state, action) => {
       state.hero.status = "loaded";
       state.hero.items.push(action.meta.arg);
+      console.log("meta arg", action.meta.arg);
     },
     [addHero.rejected]: (state) => {
       state.hero.status = "error";
@@ -58,9 +59,8 @@ export const heroSlice = createSlice({
       state.hero.status = "loading";
     },
     [deleteHero.fulfilled]: (state, action) => {
-      state.hero.status = state.hero.items.filter(
-        (item) => item._id !== action.meta.arg
-      );
+        state.hero.status = "loaded";
+        state.hero.items = state.hero.items.filter(item => item._id !== action.meta.arg);
     },
     [deleteHero.rejected]: (state) => {
       state.hero.status = "error";

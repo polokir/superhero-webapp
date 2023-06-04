@@ -30,7 +30,7 @@ class HeroController {
   async read(req, res) {
     try {
       const page = req.params.page;
-      const heros = await HeroService.get_all(page,3);
+      const heros = await HeroService.get_all(page,5);
       console.log("GET ALL HEROS - ", heros);
       res.json(heros);
     } catch (error) {
