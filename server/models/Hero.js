@@ -23,8 +23,7 @@ const HeroSchema = new Schema({
         required:true,
     },
     images:{
-        type:Array,
-        default:[]
+        type:String,
     }
 },{timestamps:true});
 

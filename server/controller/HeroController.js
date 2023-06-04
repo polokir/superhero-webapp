@@ -1,6 +1,7 @@
 const HeroService = require("../services/HeroService");
 
 class HeroController {
+  
   async create(req, res) {
     try {
       const {
@@ -28,7 +29,8 @@ class HeroController {
 
   async read(req, res) {
     try {
-      const heros = await HeroService.get_all();
+      const page = req.params.page;
+      const heros = await HeroService.get_all(page,3);
       console.log("GET ALL HEROS - ", heros);
       res.json(heros);
     } catch (error) {

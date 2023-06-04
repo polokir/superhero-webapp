@@ -13,8 +13,9 @@ class HeroService{
         return newHero;
     }
 
-    async get_all(){
-        const heros = await HeroModel.find();
+    async get_all(page,pageSize){
+        const nextDocs = (page-1)*pageSize;
+        const heros = await HeroModel.find().skip(nextDocs).limit(pageSize);
         return heros;
     }
 

@@ -4,7 +4,7 @@ const heroController = require('../controller/HeroController');
 const heroRouter = new Router();
 
 heroRouter.post("/hero",heroController.create);
-heroRouter.get("/hero",heroController.read);
+heroRouter.get("/hero/:page",heroController.read);
 heroRouter.patch("/hero/:id",heroController.update);
 heroRouter.delete("/hero/:id",heroController.delete);
 
