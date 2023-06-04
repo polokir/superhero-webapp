@@ -13,18 +13,18 @@ Front end: React.js
 Back end: Node.js && Express
 
 
-● Create, edit and remove a superhero  #(+)
+● Create, edit and remove a superhero  # (+)
 
 
 ○ When creating / editing we want to be able to assign and remove images from
-a superhero #(+/-)
+a superhero # (+/-)
 
 
 ● List all the superheros, seeing only one image for each and it’s nickname,
-with pagination, showing 5 items at once #(+)
+with pagination, showing 5 items at once # (+)
 
 
-● See the details of one particular superhero with all it’s information and images #(+/-)
+● See the details of one particular superhero with all it’s information and images # (+/-)
 
 
 The main problem was uploading the **set** of images. Now in application you can upload only **one** picture of hero.
